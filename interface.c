@@ -2400,6 +2400,8 @@ void print_msg_gw (struct tgl_state *TLSR, void *extra, int success, struct tgl_
     return;
   }
   if (!success) { print_fail (ev); return; }
+  // there used to be an assertion error
+  if (M == NULL) { return; }
   mprint_start (ev);
   if (!enable_json) {
     print_message (ev, M);
