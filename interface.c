@@ -2402,7 +2402,7 @@ void print_msg_gw (struct tgl_state *TLSR, void *extra, int success, struct tgl_
   if (!success) { print_fail (ev); return; }
   // there used to be an assertion error
   if (M == NULL) {
-    fail_interface (TLS, ev, ENOSYS, "message do not exist");
+    fail_interface (TLS, ev, ENOSYS, "message does not exist");
     return;
   }
   mprint_start (ev);
